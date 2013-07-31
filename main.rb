@@ -1,6 +1,34 @@
 require "pry"
 require "prime"
 
+
+# Problem 9
+def prob9()
+  sol9 = 0
+  a = 0
+  b = 0
+  c = 0
+  arr = []
+  for i in (1..999)
+    arr.push(i**2)
+  end
+  for i in (1..999)
+    for j in (2..999)
+      k = 1000 - i - j
+      if k**2 == i**2 + j**2
+        a = i
+        b = j
+        c = k
+        sol9 = i * j * k
+        puts sol9
+        return
+      end
+    end
+  end
+end
+
+prob9()
+
 # Problem 8
 def prob8()
   sol8 = 0
@@ -14,8 +42,6 @@ def prob8()
   end
   puts sol8
 end
-
-prob8()
 
 # Problem 7 again
 # Taking the hard way
