@@ -1,5 +1,23 @@
 require "pry"
 
+# Problem 6
+def prob6()
+  sol6 = 0
+  sum_of_squares = 0
+  for i in (1..100)
+    sum_of_squares += i*i
+  end
+  square_of_sum = 0
+  sum = 0
+  for i in (1..100)
+    sum += i
+  end
+  square_of_sum = sum * sum
+  puts square_of_sum - sum_of_squares
+end
+
+prob6()
+
 # Problem 5
 def prob5()
   sol5 = 1
@@ -20,8 +38,6 @@ def prob5()
   end
   puts "Problem 5: #{sol5}"
 end
-
-prob5()
 
 # Problem 4
 def prob4()
