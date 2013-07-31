@@ -1,5 +1,28 @@
 require "pry"
 
+# Problem 5
+def prob5()
+  sol5 = 1
+  factor = 20
+  while factor > 1
+    if sol5 % factor > 0
+      checknum = factor
+      while checknum > 1
+        if sol5 % checknum == 0 && factor % checknum == 0
+          sol5 /= checknum
+        end
+        checknum -= 1
+      end
+      sol5 *= factor
+    end
+    factor -= 1
+    puts sol5
+  end
+  puts "Problem 5: #{sol5}"
+end
+
+prob5()
+
 # Problem 4
 def prob4()
   sol4 = 0
