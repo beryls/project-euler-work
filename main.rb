@@ -9,7 +9,7 @@ def prob10()
   while current_number < 2000000
     is_prime = 1
     factor_check = 2
-    while current_number >= factor_check**2
+    while current_number >= factor_check**2 && is_prime == 1
       if current_number % factor_check == 0
         is_prime = 0
       end
