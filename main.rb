@@ -1,4 +1,37 @@
 require "pry"
+require "prime"
+
+# Problem 7 again
+# Taking the hard way
+def prob7again()
+  sol7 = 0
+  current_prime_count = 2
+  current_number = 3
+  while current_prime_count < 10001
+    is_prime = 1
+    current_number += 2
+    factor_check = 2
+    while current_number >= factor_check**2
+      if current_number % factor_check == 0
+        is_prime = 0
+      end
+      factor_check += 1
+    end
+    if is_prime == 1
+      current_prime_count += 1
+      sol7 = current_number
+    end
+  end
+  puts sol7
+end
+
+prob7again()
+
+# Problem 7
+# using the tools I have, but feels like cheating this way
+def prob7()
+  puts Prime.first(10001)
+end
 
 # Problem 6
 def prob6()
@@ -15,8 +48,6 @@ def prob6()
   square_of_sum = sum * sum
   puts square_of_sum - sum_of_squares
 end
-
-prob6()
 
 # Problem 5
 def prob5()
