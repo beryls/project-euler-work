@@ -1,6 +1,30 @@
 require "pry"
 require "prime"
 
+# Problem 10
+# Ridiculously inefficient solution - find a better way
+def prob10()
+  sol10 = 2
+  current_number = 3
+  while current_number < 2000000
+    is_prime = 1
+    factor_check = 2
+    while current_number >= factor_check**2
+      if current_number % factor_check == 0
+        is_prime = 0
+      end
+      factor_check += 1
+    end
+    if is_prime == 1
+      sol10 += current_number
+      puts current_number
+    end
+    current_number += 2
+  end
+  puts sol10
+end
+
+prob10()
 
 # Problem 9
 def prob9()
@@ -26,8 +50,6 @@ def prob9()
     end
   end
 end
-
-prob9()
 
 # Problem 8
 def prob8()
