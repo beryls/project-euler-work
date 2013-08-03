@@ -1,6 +1,19 @@
 require "pry"
 require "prime"
 
+# Problem 16
+def prob16()
+  sol16 = 0
+  power = 2**1000
+  digit_array = power.to_s.split("")
+  digit_array.each do |digit|
+    sol16 += digit.to_i
+  end
+  puts sol16
+end
+
+prob16()
+
 # Problem 15
 def prob15()
   sol15 = 0
@@ -21,8 +34,6 @@ def prob15()
   sol15 = factorial/(reduction**2)
   puts sol15
 end
-
-prob15()
 
 # Problem 14
 def prob14()
